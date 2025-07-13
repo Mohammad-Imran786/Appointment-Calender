@@ -1,6 +1,7 @@
 {
   "name": "appointment-calendar-app",
   "private": true,
+  "homepage": "https://Mohammad-Imran786.github.io/Appointment-Calendar/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
