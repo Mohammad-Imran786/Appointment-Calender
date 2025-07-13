@@ -1,12 +1,46 @@
-# React + Vite
+# 🗓️ Appointment Calendar App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive appointment booking system built using **React**, **Tailwind CSS**, and **React Big Calendar**. This app allows clinic staff to schedule, manage, and view patient appointments efficiently, with features like persistent local storage, time-slot disabling, and mock login functionality.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
 
-## Expanding the ESLint configuration
+✅ **Mock Authentication**  
+- Login with hardcoded credentials:  
+  `email: staff@clinic.com`  
+  `password: 123456`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✅ **Appointment Booking**  
+- Click on a calendar date to open a form.
+- Enter patient name, select a doctor, and choose an appointment time.
+- Each appointment lasts 15 minutes.
+
+✅ **Event Management**  
+- View scheduled appointments on the calendar.
+- Edit existing appointments by clicking on an event.
+- Delete appointments as needed.
+
+✅ **Time Slot Restrictions**  
+- Prevents booking in past dates.
+- Prevents selecting days from previous/next months shown in gray.
+- Prevents booking a time slot already taken for the selected day.
+
+✅ **Responsive Design**  
+- Calendar adapts to screen size.
+- On mobile: shows one day at a time.
+- Date picker on mobile to jump between days.
+
+✅ **Local Storage Persistence**  
+- All appointments are saved in `localStorage`.
+- No backend needed.
+
+---
+
+## 🚀 Getting Started
+
+### 📦 Clone the Repository
+
+```bash
+git clone https://github.com/Mohammad-Imran786/Appointment-Calendar-App.git
+cd Appointment-Calendar-App
