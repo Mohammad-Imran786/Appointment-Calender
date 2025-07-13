@@ -44,3 +44,46 @@ A responsive appointment booking system built using **React**, **Tailwind CSS**,
 ```bash
 git clone https://github.com/Mohammad-Imran786/Appointment-Calendar-App.git
 cd Appointment-Calendar-App
+
+🛠️ Install Dependencies
+Make sure you have Node.js and npm installed, then run:
+npm install
+
+🏃‍♂️ Start the Development Server
+npm run dev
+
+The app will open in your browser at:
+http://localhost:5173
+
+🧪 Mock Credentials
+Use these credentials to log in:
+
+Email	Password
+staff@clinic.com	123456
+
+
+
+🛠️ Tech Stack
+⚛️ React
+
+🎨 Tailwind CSS
+
+📅 React Big Calendar
+
+🧠 Moment.js (for date formatting)
+
+🗄️ localStorage (no backend required)
+
+🔐 Mock login using controlled form
+
+
+🙋‍♂️ Future Improvements
+Backend support (Firebase or Node.js)
+
+Real user auth (JWT or OAuth)
+
+Role-based access (doctors vs staff)
+
+Notifications/reminders
+
+Search and filter appointments
