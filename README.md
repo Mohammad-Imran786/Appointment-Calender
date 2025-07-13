@@ -14,7 +14,7 @@ A responsive appointment booking system built using **React**, **Tailwind CSS**,
 ✅ **Appointment Booking**  
 - Click on a calendar date to open a form.
 - Enter patient name, select a doctor, and choose an appointment time.
-- Each appointment lasts 15 minutes.
+- Each appointment lasts 30 minutes.
 
 ✅ **Event Management**  
 - View scheduled appointments on the calendar.
@@ -42,8 +42,8 @@ A responsive appointment booking system built using **React**, **Tailwind CSS**,
 ### 📦 Clone the Repository
 
 ```bash
-git clone https://github.com/Mohammad-Imran786/Appointment-Calendar-App.git
-cd Appointment-Calendar-App
+git clone https://github.com/Mohammad-Imran786/Appointment-Calendar.git
+cd Appointment-Calendar
 
 🛠️ Install Dependencies
 Make sure you have Node.js and npm installed, then run:
@@ -58,7 +58,7 @@ http://localhost:5173
 🧪 Mock Credentials
 Use these credentials to log in:
 
-Email	Password
+Email	            Password
 staff@clinic.com	123456
 
 
