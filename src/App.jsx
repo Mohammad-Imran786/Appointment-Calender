@@ -4,7 +4,7 @@ import Login from "./components/Login";
 import MyCalendar from "./components/MyCalendar";
 
 function App() {
-  
+
   const [isAuthenticated, setIsAuthenticated] = useState(
     localStorage.getItem("auth") === "true"
   );
@@ -24,7 +24,7 @@ function App() {
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
       <Routes>
         <Route
-          path="/"
+          path="/Appointment-Calendar"
           element={
             isAuthenticated ? (
               <Navigate to="/calendar" />
@@ -39,7 +39,7 @@ function App() {
             isAuthenticated ? (
               <MyCalendar onLogout={handleLogout} />
             ) : (
-              <Navigate to="/" />
+              <Navigate to="/Appointment-Calendar" />
             )
           }
         />
