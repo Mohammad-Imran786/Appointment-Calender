@@ -27,14 +27,14 @@ function App() {
           path="/Appointment-Calendar"
           element={
             isAuthenticated ? (
-              <Navigate to="/calendar" />
+              <Navigate to="/Appointment-Calendar/calendar" />
             ) : (
               <Login onLogin={handleLogin} />
             )
           }
         />
         <Route
-          path="/calendar"
+          path="/Appointment-Calendar/calendar"
           element={
             isAuthenticated ? (
               <MyCalendar onLogout={handleLogout} />
