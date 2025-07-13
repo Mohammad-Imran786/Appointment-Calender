@@ -109,11 +109,11 @@ const MyCalendar = ({ onLogout }) => {
   };
 
   return (
-    <div className="relative p-4 bg-white rounded-lg shadow-md w-full max-w-6xl mx-auto">
+    <div className="relative p-4 bg-white rounded-lg shadow-lg w-full max-w-6xl mx-auto">
       <div className="flex justify-end mb-4">
         <button
           onClick={onLogout}
-          className="bg-red-500 text-white px-4 py-1 rounded hover:bg-red-600 transition"
+          className="bg-red-500 text-white px-4 py-1 rounded hover:bg-red-600 transition cursor-pointer"
         >
           Logout
         </button>
@@ -142,7 +142,7 @@ const MyCalendar = ({ onLogout }) => {
         onSelectEvent={handleSelectEvent}
         onNavigate={(date) => setSelectedDate(date)}
         defaultView={window.innerWidth < 768 ? "day" : "month"}
-        views={["month", "day"]}
+        views={window.innerWidth < 768 ? ["day"] : ["month"]}
         tooltipAccessor={(event) =>
           `Doctor: ${event.resource.doctor} | Time: ${event.resource.time}`
         }
