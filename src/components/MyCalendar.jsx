@@ -142,7 +142,7 @@ const MyCalendar = ({ onLogout }) => {
         onSelectEvent={handleSelectEvent}
         onNavigate={(date) => setSelectedDate(date)}
         defaultView={window.innerWidth < 768 ? "day" : "month"}
-        views={["month", "week", "day"]}
+        views={["month", "day"]}
         tooltipAccessor={(event) =>
           `Doctor: ${event.resource.doctor} | Time: ${event.resource.time}`
         }

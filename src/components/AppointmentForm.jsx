@@ -11,20 +11,20 @@ const AppointmentForm = ({
 }) => {
 
     const [patientName, setPatientName] = useState('');
-    const [doctor, setDoctor] = useState('S.K Viswas');
+    const [doctor, setDoctor] = useState('Dr. S.K Viswas');
     const [time, setTime] = useState('');
     const [isEditing, setIsEditing] = useState(false);
 
     useEffect(() => {
         if (existingEvent) {
-            setPatientName(existingEvent.title.split(" — ")[0]);
+            setPatientName(existingEvent.title.split(" - ")[0]);
             setTime(existingEvent.resource.time);
             setDoctor(existingEvent.resource.doctor);
             setIsEditing(true);
         } else {
             setPatientName("");
             setTime("");
-            setDoctor("S.K Viswas");
+            setDoctor("Dr. S.K Viswas");
             setIsEditing(false);
         }
     }, [existingEvent]);
@@ -59,7 +59,7 @@ const AppointmentForm = ({
         const start = new Date(date);
         start.setHours(hour, minute);
         const end = new Date(start);
-        end.setMinutes(end.getMinutes() + 15);
+        end.setMinutes(end.getMinutes() + 30);
 
         return {
             title: `${patientName} - ${time}`,
@@ -96,12 +96,12 @@ const AppointmentForm = ({
                     <select value={doctor}
                         onChange={(e) => setDoctor(e.target.value)}
                         className="w-full border rounded px-2 py-1 mt-1">
-                        <option value="S.K Viswas">S.K Viswas</option>
-                        <option value="Haldaar">Haldaar</option>
-                        <option value="Sarwar Alam">Sarwar Alam</option>
-                        <option value="Manas Chandra">Manas Chandra</option>
-                        <option value="Tim Cook">Tim Cook</option>
-                        <option value="Larry Page">Larry Page</option>
+                        <option value="Dr. S.K Viswas">S.K Viswas</option>
+                        <option value="Dr. Haldaar">Haldaar</option>
+                        <option value="Dr. Sarwar Alam">Sarwar Alam</option>
+                        <option value="Dr. Manas Chandra">Manas Chandra</option>
+                        <option value="Dr. Tim Cook">Tim Cook</option>
+                        <option value="Dr. Larry Page">Larry Page</option>
                     </select>
                 </label>
 
@@ -122,21 +122,21 @@ const AppointmentForm = ({
                 </label>
 
                 <div className="flex justify-between mt-4">
-                    <button type="button" onClick={onClose} className="px-4 py-1 bg-gray-300 rounded">
+                    <button type="button" onClick={onClose} className="px-4 py-1 bg-gray-300 hover:bg-gray-400 rounded cursor-pointer">
                         Cancel
                     </button>
                     {isEditing && (
                         <button
                             type="button"
                             onClick={onDeleteEvent}
-                            className="px-4 py-1 bg-red-500 text-white rounded"
+                            className="px-4 py-1 bg-red-500 hover:bg-red-600 text-white rounded cursor-pointer"
                         >
                             Delete
                         </button>
                     )}
                     <button
                         type="submit"
-                        className="px-4 py-1 bg-blue-500 text-white rounded"
+                        className="px-4 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded cursor-pointer"
                     >
                         {isEditing ? "Update" : "Book"}
                     </button>
