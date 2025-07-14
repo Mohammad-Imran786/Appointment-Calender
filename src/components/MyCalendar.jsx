@@ -108,6 +108,9 @@ const MyCalendar = ({ onLogout }) => {
     setShowForm(false);
   };
 
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const calendarViews = isMobile ? ['day'] : ['month'];
+
   return (
     <div className="relative p-4 bg-white rounded-lg shadow-lg w-full max-w-6xl mx-auto">
       <div className="flex justify-end mb-4">
@@ -141,8 +144,8 @@ const MyCalendar = ({ onLogout }) => {
         onSelectSlot={handleSelectSlot}
         onSelectEvent={handleSelectEvent}
         onNavigate={(date) => setSelectedDate(date)}
-        defaultView={window.innerWidth < 768 ? "day" : "month"}
-        views={window.innerWidth < 768 ? ["day"] : ["month"]}
+        defaultView={isMobile ? 'day' : 'month'}
+        views={calendarViews}
         tooltipAccessor={(event) =>
           `Doctor: ${event.resource.doctor} | Time: ${event.resource.time}`
         }
