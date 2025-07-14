@@ -1,4 +1,3 @@
-// MyCalendar.jsx
 import React, { useState, useEffect } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
@@ -60,14 +59,16 @@ const MyCalendar = ({ onLogout }) => {
   };
 
   const handleAddEvent = ({ patientName, time, doctor, date }) => {
-    const [hour, minute] = time.split(":").map(Number);
-
+    const parts = time.split(":");
+    const hour = Number(parts[0]);
+    const minute = Number(parts[1]);
+  
     const start = new Date(date);
     start.setHours(hour, minute);
-
+  
     const end = new Date(start);
-    end.setMinutes(end.getMinutes() + 15);
-
+    end.setMinutes(end.getMinutes() + 30);
+  
     const newEvent = {
       id: Date.now(),
       title: `${patientName} - ${time}`,
@@ -75,10 +76,11 @@ const MyCalendar = ({ onLogout }) => {
       end,
       resource: { time, doctor }
     };
-
+  
     setEvents((prev) => [...prev, newEvent]);
     setShowForm(false);
   };
+  
 
   const handleUpdateEvent = (updatedEvent) => {
     setEvents((prev) =>
