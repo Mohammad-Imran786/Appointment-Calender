@@ -24,22 +24,22 @@ function App() {
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
       <Routes>
         <Route
-          path="/Appointment-Calendar"
+          path="/"
           element={
             isAuthenticated ? (
-              <Navigate to="/Appointment-Calendar/calendar" />
+              <Navigate to="/calendar" />
             ) : (
               <Login onLogin={handleLogin} />
             )
           }
         />
         <Route
-          path="/Appointment-Calendar/calendar"
+          path="/calendar"
           element={
             isAuthenticated ? (
               <MyCalendar onLogout={handleLogout} />
             ) : (
-              <Navigate to="/Appointment-Calendar" />
+              <Navigate to="/" />
             )
           }
         />
