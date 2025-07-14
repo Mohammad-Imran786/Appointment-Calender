@@ -11,7 +11,7 @@ const AppointmentForm = ({
 }) => {
 
     const [patientName, setPatientName] = useState('');
-    const [doctor, setDoctor] = useState('Dr. S.K Viswas');
+    const [doctor, setDoctor] = useState("Dr. S.K Viswas");
     const [time, setTime] = useState('');
     const [isEditing, setIsEditing] = useState(false);
 
@@ -62,6 +62,7 @@ const AppointmentForm = ({
         end.setMinutes(end.getMinutes() + 30);
 
         return {
+            id: Date.now(),
             title: `${patientName} - ${time}`,
             start,
             end,
