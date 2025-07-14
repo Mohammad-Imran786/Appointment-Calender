@@ -50,7 +50,7 @@ const Login = ({ onLogin }) => {
                     />
                 </div>
 
-                <div className="mb-4">
+                <div className="mb-6">
                     <label className="block text-gray-700 text-sm mb-1">Password</label>
                     <input
                         type="password"
@@ -60,10 +60,6 @@ const Login = ({ onLogin }) => {
                         onChange={handleInputChange(setPassword)}
                     />
                 </div>
-                <div className="mb-4 text-sm text-gray-600">
-                    <p>Test Email: staff@clinic.com</p>
-                    <p>Test Password: 123456</p>
-                </div>
 
                 <button
                     type="submit"
@@ -71,6 +67,14 @@ const Login = ({ onLogin }) => {
                 >
                     Sign In
                 </button>
+
+                <div className="mt-4 text-gray-600 text-sm">
+                    <p className="font-semibold mb-2">🧪 Mock Credentials:</p>
+                    <ul className="list-disc list-inside space-y-1">
+                        <li>Email: <span className="font-mono">staff@clinic.com</span></li>
+                        <li>Password: <span className="font-mono">123456</span></li>
+                    </ul>
+                </div>
             </form>
         </div>
     );
