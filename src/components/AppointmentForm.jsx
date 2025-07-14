@@ -97,12 +97,12 @@ const AppointmentForm = ({
                     <select value={doctor}
                         onChange={(e) => setDoctor(e.target.value)}
                         className="w-full border rounded px-2 py-1 mt-1">
-                        <option value="Dr. S.K Viswas">S.K Viswas</option>
-                        <option value="Dr. Haldaar">Haldaar</option>
-                        <option value="Dr. Sarwar Alam">Sarwar Alam</option>
-                        <option value="Dr. Manas Chandra">Manas Chandra</option>
-                        <option value="Dr. Tim Cook">Tim Cook</option>
-                        <option value="Dr. Larry Page">Larry Page</option>
+                        <option value="Dr. S.K Viswas">Dr. S.K Viswas</option>
+                        <option value="Dr. Haldaar">Dr. Haldaar</option>
+                        <option value="Dr. Sarwar Alam">Dr. Sarwar Alam</option>
+                        <option value="Dr. Manas Chandra">Dr. Manas Chandra</option>
+                        <option value="Dr. Tim Cook">Dr. Tim Cook</option>
+                        <option value="Dr. Larry Page">Dr. Larry Page</option>
                     </select>
                 </label>
 
